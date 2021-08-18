@@ -1,4 +1,4 @@
-[[ $TERM != "screen" ]] && exec tmux
+#[[ $TERM != "screen" ]] && exec tmux
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -100,15 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# ADDED BY ME #
-# -------
-# Aliases
-# -------
-# Directories
-alias school="cd ~/School/SDSU\ \(F18\ -\ S20\)/School\ S20/"
-alias jproj="cd ~/SoftDev/Java/IdeaProjects/"
-alias shellscripting="cd ~/SoftDev/Unix/ShellScripting/"
-
 # Applications
 alias safari="open -a Safari"
 alias mail="open -a Mail"
@@ -119,7 +110,6 @@ alias flush="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;su
 alias ip="curl icanhazip.com" #public ip address
 #alias weather="curl -s "wttr.in/$1?m1"" #weather
 alias cpp11="clang++ -std=c++11 -stdlib=libc++"
-eval "$(thefuck --alias)"
 alias wtfismyip="curl https://wtfismyip.com/json"
 # shell variable 'old' records previous directory name each time the
 # current directory is changed - used to 'backup' to where you were:
@@ -128,24 +118,8 @@ set old = $HOME
 alias coway="/usr/local/Cellar/cowsay/3.04/bin/cowsay"
 alias parrot="curl parrot.live"
 
-#edoras accounts
-alias ssh206="ssh cssc0206@edoras.sdsu.edu"
-#alias ssh570="ssh cssc0013@edoras.sdsu.edu"
-alias ssh570="ssh edoras.sdsu.edu"
-
 # git
 alias graph="git log --all --decorate --oneline --graph"
-
-# VMs
-## XSS Box controls
-alias webserver1_ssh="ssh -p 2222 unclesam@localhost"
-alias webserver1_up="VBoxManage startvm "WebServer1" --type headless"
-alias webserver1_down="VBoxManage controlvm "WebServer1" acpipowerbutton"
-# local XSS box (forgot HD :( )
-alias webserver2_ssh="ssh -p 2222 unclesam@localhost"
-alias webserver2_up="VBoxManage startvm "WebServer2_local" --type headless"
-alias webserver2_down="VBoxManage controlvm "WebServer2_local" acpipowerbutton"
-## End of XSS Box controls
 
 #make directory and change into it
 mkcd () {
@@ -154,6 +128,6 @@ mkcd () {
 }
 
 #pyenv shit
-export PATH="/Users/jack/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="/Users/jack/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
